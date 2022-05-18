@@ -1,5 +1,6 @@
 #TODO Create settings manager
+from win32api import GetSystemMetrics
 
-windowX = 500
-windowY = 500
+windowX = GetSystemMetrics(0)
+windowY = GetSystemMetrics(1)
 fps = 60

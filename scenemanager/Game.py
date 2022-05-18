@@ -13,5 +13,5 @@ class GameScene(SceneBase):
                     DebugMessager.errormessage("SceneManager","No more scenes!")
     def update(self):
         pass
-    def render(self, screen):
+    def render(self, screen,surface):
         screen.fill((255,0,0))

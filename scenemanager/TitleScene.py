@@ -26,12 +26,12 @@ class TitleScene(SceneBase):
                     if 800 < pygame.mouse.get_pos()[0] < 1100:
                         if  300 < pygame.mouse.get_pos()[1]  < 425:
                             DebugMessager.debugmessage("GUI", "Player Clicked Singleplayer Button")
-                            self.switchtoscene(WorldList())
+                            self.switchtoscene(GameScene())
 
     def update(self):
         pass
 
-    def render(self, screen, surface:pygame.Surface):
+    def render(self, screen, surface:pygame.Surface, clock):
         surface.fill((0,255,255))
 
         #Init Font

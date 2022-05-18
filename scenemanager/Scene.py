@@ -9,7 +9,7 @@ class SceneBase:
     def update(self):
         print("Error, you didn't override this in the child class")
 
-    def render(self, screen, surface):
+    def render(self, screen, surface,clock):
         print("Error, you didn't override this in the child class")
 
     def switchtoscene(self, next_scene):

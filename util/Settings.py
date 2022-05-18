@@ -2,4 +2,5 @@ from win32api import GetSystemMetrics
 
 windowX = GetSystemMetrics(0)
 windowY = GetSystemMetrics(1)
-fps = 60
+fpscap = 120
+displayFps = True

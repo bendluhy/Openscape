@@ -11,7 +11,7 @@ class WorldList(SceneBase):
     def update(self):
         pass
 
-    def render(self, screen:pygame.surface, surface):
+    def render(self, screen:pygame.surface, surface, clock):
         screen.fill((255,255,255))
 
 

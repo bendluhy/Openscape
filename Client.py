@@ -12,6 +12,7 @@ pygame.display.set_caption(f"Openscape {Reference.version} {Reference.developmen
 clock = pygame.time.Clock()
 active_scene = TitleScene()
 surface = pygame.Surface((1920, 1080))
+
 while active_scene != None:
     pressed_keys = pygame.key.get_pressed()
 
@@ -41,12 +42,11 @@ while active_scene != None:
 
     active_scene.processinput(filtered_events, pressed_keys)
     active_scene.update()
-    active_scene.render(screen, surface)
+    active_scene.render(screen, surface, clock)
 
     active_scene = active_scene.next
-
+    clock.tick(Settings.fpscap)
     pygame.display.flip()
-    clock.tick(Settings.fps)
 
 
 

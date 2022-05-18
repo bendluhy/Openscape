@@ -1,9 +1,9 @@
 import pygame
-
-
 from scenemanager.TitleScene import TitleScene
 from util import Reference, Settings, DebugMessager
 import datetime
+
+
 # MAIN WINDOW #
 pygame.init()
 DebugMessager.debugmessage("LAUNCH", f"Launching Game VERSION: {Reference.version} DEVSTAGE: {Reference.development_stage}")
@@ -51,6 +51,5 @@ while active_scene != None:
 
 
     # Flip the display
-
     pygame.display.flip()
 

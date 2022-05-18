@@ -1,7 +1,7 @@
 import datetime
 
 
-#System that manages error and debug messages to be easier to read and see when they occurred'
+#System that manages error and debug messages to be easier to read and see when they occurred
 
 def errormessage(context, err):
     errtime = datetime.datetime.now().strftime("%H:%M:%S")

@@ -3,7 +3,7 @@ import pygame
 
 from scenemanager.TitleScene import TitleScene
 from util import Reference, Settings, DebugMessager
-
+import datetime
 # MAIN WINDOW #
 pygame.init()
 DebugMessager.debugmessage("LAUNCH", f"Launching Game VERSION: {Reference.version} DEVSTAGE: {Reference.development_stage}")
@@ -27,6 +27,12 @@ while active_scene != None:
             if event.key == pygame.K_F4 and alt_pressed:
                 DebugMessager.debugmessage("Closing Game", "User Closed")
                 quit_attempt = True
+            if event.key == pygame.K_F2:
+
+                #Screenshot System
+                time = datetime.datetime.now().strftime("%Y-%m-%d_%H.%M.%S")
+                pygame.image.save(screen,f"gamefiles/screenshots/{time}.png")
+                DebugMessager.debugmessage("Screenshot", f"Screenshot {time} stored")
 
         if quit_attempt:
             active_scene.terminate()
